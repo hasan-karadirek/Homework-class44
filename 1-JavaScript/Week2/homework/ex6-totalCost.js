@@ -43,20 +43,17 @@ function test1() {
   console.assert(calculateTotalPrice.length === 1);
 }
 
-function test2(cart) {
+function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
+  const testCart = { test1: 1, test2: 2, test3: 3.5, test4: 2.3 };
 
-  const expectedAmount = Object.values(cart).reduce(
-    (sum, itemPrice) => sum + itemPrice,
-    0
-  );
-  const actualAmount = calculateTotalPrice(cart);
-  console.assert(expectedAmount === actualAmount);
+  const actualAmount = calculateTotalPrice(testCart);
+  console.assert(actualAmount === 8.8);
 }
 
-function test(cart) {
+function test() {
   test1();
-  test2(cart);
+  test2();
 }
 
-test(cartForParty);
+test();

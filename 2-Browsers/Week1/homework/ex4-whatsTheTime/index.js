@@ -16,7 +16,6 @@ function addCurrentTime() {
   const pElement = document.createElement('p');
   pElement.innerText = time;
   body.appendChild(pElement);
-  console.log(time);
 }
 
 setInterval(addCurrentTime, 1000);

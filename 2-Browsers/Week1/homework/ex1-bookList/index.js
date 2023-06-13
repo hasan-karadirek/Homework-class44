@@ -40,7 +40,7 @@ function createBookList(books) {
 function main() {
   const myBooks = [
     {
-      title: 'The Design of Everyday Things',
+      title: 'The Design of, Everyday Things',
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,

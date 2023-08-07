@@ -38,7 +38,8 @@ function requestData(url) {
 
 function renderImage(data) {
   const img = document.createElement('img');
-  img.src = data;
+  img.alt = data.alt;
+  img.src = data.img;
   document.body.appendChild(img);
 }
 
@@ -50,9 +51,9 @@ function renderError(error) {
 
 async function main() {
   try {
-    const response = await requestData('https://xkcd.now.shx/?comic=latest');
+    const response = await requestData('https://xkcd.now.sh/?comic=latest');
     response.json().then((data) => {
-      renderImage(data.img);
+      renderImage(data);
     });
   } catch (error) {
     renderError(error);

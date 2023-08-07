@@ -1,0 +1,4 @@
+
+*** Spell Checker Report ***
+
+ex5-vscDebug.js:23:16 - Unknown word (hasis)
